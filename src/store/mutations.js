@@ -139,6 +139,10 @@ const mutations = {
     state.saleSurvey = data
   },
 
+  FETCH_ALBA(state, data) {
+    state.myAlbaForm = data
+  },
+
   FETCH_SELL(state, data){
     state.sellSurvey = data
   }

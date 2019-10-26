@@ -4,12 +4,11 @@
         <v-layout align-center row wrap style="z-index:1">
           <v-flex xs9 >
             <div class="title white--text ml-2">
-              {{$t('Market.jumbotronSubTitle')}}
+              asd
             </div>
             <div class="white--text mt-2 mb-5 page-title">
-              {{$t('Market.jumbotronTitle')}}
+              asd
             </div>
-            <v-btn large class="info--text px-5 title font-weight-bold sell-but" @click="SET_IS_SURVEY_SALE(true)">アンケート販売</v-btn>
           </v-flex>
         </v-layout>
       </v-container>

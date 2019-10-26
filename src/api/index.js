@@ -156,6 +156,10 @@ export const market = {
   // 설문 마켓 - 판매할 설문 각각의 정보
   FetchListSell(id) {
     return serverRequest('post','/api/market/sellable-show', id)
+  },
+
+  FetchAlbaList() {
+    return albaRequest('get', 'http://15.164.224.74:3000/employeejobsearch')
   }
 }
 

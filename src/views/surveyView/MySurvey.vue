@@ -99,6 +99,7 @@
         'FETCH_MY_SURVEY_FORM',
         'REMOVE_MY_SURVEY'
       ]),
+      
       noRedirectAnalysis() {
         swal("確認できません","誰も応じなかったです。","error", {button:"OK"});
       },

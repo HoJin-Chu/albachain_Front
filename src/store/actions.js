@@ -149,6 +149,13 @@ const actions = {
     })
   },
 
+  FETCH_ALBA(context) {
+    api.market.FetchAlbaList().then(response => {
+      context.commit('FETCH_ALBA', response)
+      console.log(response)
+    })
+  },
+
   // 판매할 설문 리스트
   FETCH_SELL(context, {id: user_id}){
     context.state.loading = true

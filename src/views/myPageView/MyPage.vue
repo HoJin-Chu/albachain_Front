@@ -8,7 +8,6 @@
     style="max-width: 100vw; padding:0px;"
     >
 
-      <div v-if="this.$route.name == 'mypage'">
     <v-img src="/static/mypage.png" style="margin-bottom:-50px; margin-right:-50px;">
 
         <div class="display-2 pa-5 mt-5 font-weight-bold">
@@ -78,9 +77,6 @@
         </v-layout>
     </v-img>
       </div>
-    <div v-else>
-      <router-view/>
-    </div>
 
   </v-container>
 </template>

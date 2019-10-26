@@ -1,6 +1,6 @@
 <template>
   <v-fade-transition mode="out-in">
-        <v-container fill-height>
+        <v-container fill-height >
           <v-layout align-center row wrap style="z-index:1">
             <v-flex xs9>
               <div class="title white--text ml-2"> {{$t('Donation.jumbotronSubTitle')}}</div>

@@ -25,15 +25,9 @@
       </v-btn>
     </v-toolbar-items>
     <v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/>
-    <template v-if="!isAuth">
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" @click="SET_IS_LOGIN(true)" flat  class="subheading"><span style="font-size:18px;">로그인</span></v-btn>
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'join'}" flat  class="subheading"><span style="font-size:18px;">회원가입</span></v-btn>
-    </template>
-    <template v-else>
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'mypage'}" flat class="subheading"><span style="font-size:18px;">마이페이지</span></v-btn>
+      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined"  flat class="subheading"><span style="font-size:18px;">마이페이지</span></v-btn>
       <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" 
       @click.prevent="logout" flat class="subheading"><span style="font-size:18px;">로그아웃</span></v-btn>
-    </template>
     <v-spacer/>
 
     <v-btn v-if="!$vuetify.breakpoint.mdAndUp" icon @click="toggleDrawer">
@@ -67,7 +61,7 @@
       ]),
       logout() {
         swal({
-          text: "ログアウトしますか？",
+          text: "로그아웃 하시겠어요?",
           icon: "warning",
           buttons: true,
           dangerMode: true,

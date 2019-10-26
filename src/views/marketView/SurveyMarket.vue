@@ -1,7 +1,7 @@
 <template>
   <div v-if="this.$route.name == 'surveymarket'">
-         <v-img src="/static/market-hero.png" style="z-index:0"></v-img>
-    <MarketJumbotron style="margin-top:-500px;"/>
+         <v-img src="/static/alba_main.jpg" style="z-index:0; clip-path: ellipse(70% 90% at 48% 0%);"></v-img>
+    <MarketJumbotron style="margin-top:-400px;"/>
     <MarketContext/>
   </div>
   <div v-else>

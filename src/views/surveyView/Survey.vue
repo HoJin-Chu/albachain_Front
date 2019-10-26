@@ -1,7 +1,7 @@
 /* 설문모드를 정하는 페이지 (설문작성/내설문보기) */
 
 <template lang="html">
-  <div>
+  <div style="background-color: #f1f5fe;">
     <v-img
       v-if="this.$route.name == 'survey'" 
       height="100vh"
@@ -14,12 +14,12 @@
         <v-layout 
           row wrap align-center 
           justify-center class="ml-5">
-          <v-flex d-flex xs12 sm6 md6 lg5 xl4 class="pa-3">
+          <v-flex d-flex xs12 sm6 md6 lg5 xl4 class="pa-1 mx-3">
             <v-hover>
               <v-card 
                 slot-scope="{ hover }" color="grey lighten-5"
-                max-width="600" tile>
-                <v-img :aspect-ratio="16/12" :src="Features[0].img">
+                max-width="700" >
+                <v-img :aspect-ratio="16/13" :src="Features[0].img">
                   <v-expand-transition>
                     <div
                       v-if="hover" style="cursor:pointer;height:100%;"
@@ -37,15 +37,15 @@
               </v-card>
             </v-hover>
           </v-flex>
-          <v-flex d-flex xs12 sm6 md6 lg5 xl4 class="pa-3">
+          <v-flex d-flex xs12 sm6 md6 lg5 xl4 class="pa-1 mx-3">
             <v-hover>
               <v-card
                 slot-scope="{ hover }" color="grey lighten-4" 
-                max-width="600" class="rounded-card">
-                <v-img :aspect-ratio="16/12" :src="Features[1].img">
+                max-width="700" class="rounded-card">
+                <v-img :aspect-ratio="16/13" :src="Features[1].img">
                   <v-expand-transition>
                     <div
-                      v-if="hover" style="cursor:pointer;height:100%;"
+                      v-if="hover" style="cursor:pointer; height:100%;"
                       class="d-flex transition-fast-in-fast-out green darken-3
                       v-card--reveal display-1 white--text font-weight-thin" 
                       @click="my_survey_list">

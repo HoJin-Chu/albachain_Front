@@ -21,6 +21,7 @@ import donateHistory        from '@/components/mypage/donateHistory'
 import walletHistory        from '@/components/mypage/walletHistory'
 import MarketDetail         from '@/views/marketView/MarketDetail'
 import MarketSale           from '@/views/marketView/MarketSale'
+import AlbaDetailCard       from '@/components/market/AlbaDetailCard'
 import Donation             from '@/views/donationView/Donation'
 import DonationDetail       from '@/views/donationView/DonationDetail'
 import AddDonationBox       from '@/views/donationView/AddDonationBox'
@@ -152,6 +153,12 @@ const router = new Router({
           name: 'marketsale',
           props: true,
           component: MarketSale
+        },
+        {
+          path: 'AlbaDetailCard/:albalist_id',
+          name: 'AlbaDetailCard',
+          props: true,
+          component: AlbaDetailCard
         }
       ]
     },
