@@ -1,0 +1,18 @@
+{
+  "survey_title": "",
+  "survey_description": "",
+  "target": {
+    "gender":0,
+    "age":[],
+    "job":[],
+    "responseNumber":0
+  },
+  "is_sale": 0,
+  "closed_at":"",
+  "user_id": 0,
+  "bgcolor":"",
+  "list":[]
+}
+
+
+
