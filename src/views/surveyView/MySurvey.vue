@@ -4,8 +4,9 @@
         <v-flex xs12 sm12 md12 xl11 class="center_card">
             <v-btn 
               large color="info"
-              class="subheading
-              font-weight-bold mt-4"
+              class="subheading v-btn--block
+              font-weight-bold mt-4" round
+              style="margin:0 auto; width:500px; height:50px;"
               @click="albaCreateFormRoute"
               >
               등록하기
