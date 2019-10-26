@@ -9,7 +9,7 @@
           @click="SET_IS_LOGIN(false)">
           <i class="far fa-times-circle"></i>
         </span>
-        <img src="/static/logo.png" id="center" class="logo_center pa-4">
+          <h1 style="font-size:40px;" class="pa-4">AlbaChain</h1>
         <v-card-text>
           <v-container grid-list-md>
             <v-form @submit.prevent="onSubmit" id="check-login-form">
@@ -44,7 +44,7 @@
           <v-btn
             type="submit" block flat 
             class="info" form="check-login-form">
-            ログイン
+            로그인
           </v-btn>
         </v-card-actions>
         <v-card-actions>
@@ -52,7 +52,7 @@
            class="blue--text"  
            block outline
            @click="registerPage">
-           会員登録
+           회원가입
           </v-btn>
         </v-card-actions>
       </v-card>

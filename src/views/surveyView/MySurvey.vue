@@ -3,14 +3,6 @@
     <div v-if="this.$route.name == 'mysurvey'">
       <div v-if="!this.$store.state.loading">
         <v-flex xs12 sm12 md12 xl11 class="center_card">
-          <v-layout row wrap justify-end>
-            <div>
-              <v-btn small color="" @click="sale_check = 2" >すべて</v-btn>
-              <v-btn small color="grey" @click="stay" dark>待機中</v-btn>
-              <v-btn small color="grey" @click="staySale" dark>販売待機中</v-btn>
-              <v-btn small color="#64B5F6" @click="sale" dark>販売中</v-btn>
-            </div>
-          </v-layout>
           <div v-for="(form, index) in SortmySurveyForm" :key="index">
             <v-card 
               v-if="sale_check == 2 || form.is_sale == sale_check && form.is_completed == complete_check"

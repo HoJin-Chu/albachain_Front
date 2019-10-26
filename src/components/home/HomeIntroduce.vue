@@ -1,39 +1,37 @@
 <template lang="html">
   <v-fade-transition mode="out-in">
     <v-layout column>
-      
-      <v-flex xs12>
+
+      <v-flex xs12 id="element">
         <div
-          class="pa-5" 
-          data-aos="fade-right" 
+          class="pa-5"
+          data-aos="fade-right"
           data-aos-delay="200" >
           <v-layout row　align-center justify-center>
           <span class="text-xs-left text-md-left ">
-            <span class="headline info--text text-xs-left font-weight-black">依頼者</span>
+            <span class="headline info--text text-xs-left font-weight-black">고용주</span>
             <div class="mt-4 title message" >
-              回答者を指定して必要な情報を<br>
-              提供してもらうことができます。<br>
-              分析結果は様々な形で表示されます。
+              편하게 근로계약서를 작성하고<br>
+              업무 집중도 상승시켜 보세요.
             </div>
           </span>
-          <v-img src="/static/request.png" class="ma-5" max-width="30%"></v-img>
+          <v-img src="/static/소상공인.png" class="ma-5" max-width="15%"></v-img>
           </v-layout>
         </div>
       </v-flex>
       <v-flex xs12>
         <div
-          class="pa-5" 
-          data-aos="fade-right" 
+          class="pa-5"
+          data-aos="fade-right"
           data-aos-delay="200"
           >
           <v-layout  align-center justify-center>
-              <v-img src="/static/respond.png" class="ma-5" max-width="30%" centered></v-img>
+              <v-img src="/static/알바.png" class="ma-5" max-width="15%" centered></v-img>
               <span class="text-xs-left text-md-left ">
-                <span class="headline info--text text-xs-left font-weight-black">回答者</span>
+                <span class="headline info--text text-xs-left font-weight-black">피고용자</span>
                 <div class="mt-4 title message" >
-                  スマートフォンで気軽にアンケートに<br>
-                  参加できます。アンケートに回答すると<br>
-                  INOがもらえます。
+                  안전하게 근로계약서를 작성하고<br>
+                  심리적인 불안감을 해소하세요.
                 </div>
               </span>
           </v-layout>
@@ -43,14 +41,14 @@
       <v-flex md12 text-md-center text-xs-center>
         <v-img src="/static/background.png">
         <div
-          height="30vh" 
+          height="30vh"
           class="pa-5 mt-5"
-          data-aos="flip-up" 
+          data-aos="flip-up"
           data-aos-delay="200" >
           <v-card-text class="display-2 mt-5">
-             INO-Surveyをはじめてみませんか?
+             Albachain을 이용해 보시겠습니까?
           </v-card-text>
-          <v-btn color="info" round large router :to="{name: 'join'}">スタート</v-btn>
+          <v-btn color="info" round large router :to="{name: 'join'}">회원 가입</v-btn>
         </div>
         </v-img>
       </v-flex>
@@ -59,7 +57,7 @@
 </template>
 
  <style scoped>
- .message{
-   line-height: 200%
- }
- </style>
+.message {
+  line-height: 200%;
+}
+</style>

@@ -17,8 +17,8 @@
           <v-flex d-flex xs12 sm6 md6 lg5 xl4 class="pa-3">
             <v-hover>
               <v-card 
-                slot-scope="{ hover }" color="grey lighten-4"
-                max-width="600" class="rounded-card">
+                slot-scope="{ hover }" color="grey lighten-5"
+                max-width="600" tile>
                 <v-img :aspect-ratio="16/12" :src="Features[0].img">
                   <v-expand-transition>
                     <div
@@ -30,7 +30,7 @@
                     </div>
                   </v-expand-transition>
                 </v-img>
-                <v-card-text class="pt-4">
+                <v-card-text class="pt-4" style="text-align:center;">
                   <div class="font-weight-light grey--text title mb-2">{{$t(Features[0].mainText)}}</div>
                   <h3 :class="Features[0].color" class="headline pa-2">{{$t(Features[0].subText)}}</h3>
                 </v-card-text>
@@ -46,14 +46,14 @@
                   <v-expand-transition>
                     <div
                       v-if="hover" style="cursor:pointer;height:100%;"
-                      class="d-flex transition-fast-in-fast-out amber darken-3
+                      class="d-flex transition-fast-in-fast-out green darken-3
                       v-card--reveal display-1 white--text font-weight-thin" 
                       @click="my_survey_list">
                       {{$t(Features[1].hoverTitle)}}
                     </div>
                   </v-expand-transition>
                 </v-img>
-                <v-card-text class="pt-4">
+                <v-card-text class="pt-4" style="text-align:center;">
                   <div class="font-weight-light grey--text title mb-2">{{$t(Features[1].mainText)}}</div>
                   <h3 :class="Features[1].color" class="headline pa-2">{{$t(Features[1].subText)}}</h3>
                 </v-card-text>
@@ -107,8 +107,5 @@
     opacity: .7;
     position: absolute;
     width: 100%;
-  }
-  .rounded-card {
-    border-radius:20px;
   }
 </style>

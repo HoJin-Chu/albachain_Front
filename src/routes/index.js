@@ -103,7 +103,7 @@ const router = new Router({
       path: '/survey',
       name: 'survey',
       component: Survey,
-      beforeEnter: requireAuth,
+      // beforeEnter: requireAuth,
       children: [
         {
           path: 'surveyform',

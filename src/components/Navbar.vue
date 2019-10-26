@@ -7,8 +7,7 @@
     style="z-index: 9999; "
     >
     <router-link to="/">
-      <img v-if="this.$route.name == 'home'" :src="!isScrolling ? '/static/logo_wh.png':'/static/logo.png'" id="top">
-      <img v-else src="/static/logo.png" id="top">
+      <h1 style="font-size:40px;" class="pa-4">AlbaChain</h1>
     </router-link>
     <v-toolbar-items v-if="$vuetify.breakpoint.mdAndUp && this.$route.name == 'home'">
       <!-- :active-class="!isScrolling ? 'grey--text text--darken-3' : 'grey--text text--darken-3'"  -->
@@ -27,13 +26,13 @@
     </v-toolbar-items>
     <v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/><v-spacer/>
     <template v-if="!isAuth">
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" @click="SET_IS_LOGIN(true)" flat outline class="subheading">Login</v-btn>
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'join'}" flat outline class="subheading">sign up</v-btn>
+      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" @click="SET_IS_LOGIN(true)" flat  class="subheading"><span style="font-size:18px;">로그인</span></v-btn>
+      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'join'}" flat  class="subheading"><span style="font-size:18px;">회원가입</span></v-btn>
     </template>
     <template v-else>
-      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'mypage'}" flat outline class="subheading">MyPage</v-btn>
+      <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" :to="{name : 'mypage'}" flat class="subheading"><span style="font-size:18px;">마이페이지</span></v-btn>
       <v-btn v-if="$vuetify.breakpoint.mdAndUp"  :active-class="!isScrolling ? 'blue--text' : undefined" 
-      @click.prevent="logout" flat outline class="subheading">Logout</v-btn>
+      @click.prevent="logout" flat class="subheading"><span style="font-size:18px;">로그아웃</span></v-btn>
     </template>
     <v-spacer/>
 

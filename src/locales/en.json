@@ -11,46 +11,36 @@
   "View": {
     "items": [
       {
-        "to": "/",
-        "text": "home"
-      },
-      {
         "to": "/survey",
-        "text": "survey"
+        "text": "알바등록"
       },
       {
         "to": "/surveymarket",
-        "text": "market"
-      },
-      {
-        "to": "/donation",
-        "text": "donation"
+        "text": "알바리스트"
       }
     ]
   },
   "Survey": {
     "surveyFeatures": [
       {
-        "hoverTitle": "アンケート依頼",
-        "mainText": "",
-        "subText": "アンケート作成",
+        "hoverTitle": "구인 공고",
+        "subText": "구인 공고 작성하기",
         "img": "/static/create.png",
         "color": "blue--text text--darken-1"
       },
       {
-        "hoverTitle": "アンケートリスト",
-        "mainText": "",
-        "subText": "作成したアンケートリスト",
+        "hoverTitle": "내가 작성한 구인 공고",
+        "subText": "작성한 구인 공고 보기",
         "img": "/static/mysurvey.png",
-        "color": "amber--text text--darken-3"
+        "color": "green--text text--darken-3"
       }
     ]
   },
   "Home": {
-    "jumbotronTitle": "透明で信頼性の高いアンケート",
-    "jumbotronLogo": "INO-Survey",
-    "jumbotronSubTitle": "自分に必要な答えを探してください。",
-    "btnText": "アンケート 依頼",
+    "jumbotronTitle": "투명하고 믿을 수 있는 알바 구인 사이트",
+    "jumbotronLogo": "AlbaChain",
+    "jumbotronSubTitle": "자신에게 맞는 아르바이트를 찾아보세요。",
+    "btnText": "구인 공고 보러가기",
     "cardTitle": "サービスの紹介",
     "cardFeatures": [
       {

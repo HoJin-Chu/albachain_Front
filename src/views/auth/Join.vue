@@ -7,25 +7,25 @@
         <v-flex xs12 sm12 md6 class="pa-5">
         	<v-card tile flat color="#FAFAFA" height="100vh">
           	<v-card-title>
-            	<div class="display-2 font-weight-bold ml-4">会員登録</div>
+            	<div class="display-2 font-weight-bold ml-4">회원가입</div>
           	</v-card-title>
-          	<span class="ml-5 headline">INO-SURVEYと一緒に行きましょう！</span>
+          	<span class="ml-5 headline">알바체인으로 나의 정보를 보호해요!</span>
           	<v-card-text class="pa-5">
 							<v-form @submit.prevent="register" id="check-register-form">
 								<v-layout row wrap justify-center>
-										<v-radio-group v-model="is_donator" class="pl-5" row prepend-icon="check">
-											<v-radio label="一般会員" :value="0"></v-radio>
-											<v-radio color="red" label="寄付団体" :value="1"></v-radio>
+										<v-radio-group v-model="is_donator" class="pl-5" row >
+											<v-radio label="고용주" :value="0"></v-radio>
+											<v-radio color="red" label="아르바이트생" :value="1"></v-radio>
 										</v-radio-group>
 									<v-flex sm10 column>
 										<v-text-field
 											v-model="user_id"
-											placeholder="Id"
+											placeholder="아이디"
 											ref="input" required>
 										</v-text-field>
 										<v-text-field
 											v-model="password"
-											placeholder="Password"
+											placeholder="비밀번호"
 											type="password"
 											counter="20"
 											:rules="passwordRules"
