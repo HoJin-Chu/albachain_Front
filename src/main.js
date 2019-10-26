@@ -16,10 +16,10 @@ Vue.use(VueScrollTo,Carousel3d)
 Vue.config.productionTip = false
 
 new Vue({
-  beforeCreate() {
-    let token = localStorage.getItem('token')
-    this.$store.dispatch('USER_INFO', { access_token: token })
-  },
+  // beforeCreate() {
+  //   let token = localStorage.getItem('token')
+  //   this.$store.dispatch('USER_INFO', { access_token: token })
+  // },
   created(){AOS.init()}, // scroll
   swal, // alert
   router,

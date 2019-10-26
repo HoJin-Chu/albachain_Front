@@ -5,7 +5,7 @@
         <v-card flat color="#FAFAFA">
           <div class="card-title 
           display-1 font-weight-bold pb-2">
-          asd
+          {{albaList}}
           </div>
           <div class="card-text px-5 mx-5 font-weight-black">
           asd

@@ -2,12 +2,15 @@
 <div>
       <v-container fill-height>
         <v-layout align-center row wrap style="z-index:1">
-          <v-flex xs9 >
-            <div class="title white--text ml-2">
-              asd
+          <v-flex xs12 style="text-align:center;">
+            
+            <div class="white--text page-title">
+              알바를 한눈에 확인하세요 !
+
             </div>
-            <div class="white--text mt-2 mb-5 page-title">
-              asd
+
+            <div class="title white--text">
+              나의 정보를 안전하게 AlbaChain.
             </div>
           </v-flex>
         </v-layout>

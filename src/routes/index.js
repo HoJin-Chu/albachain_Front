@@ -9,6 +9,7 @@ import SurveyMarket         from '@/views/marketView/SurveyMarket'
 import SurveyForm           from '@/views/surveyView/SurveyForm'
 import SurveyRequest        from '@/views/surveyView/SurveyRequest'
 import SurveyComplete       from '@/views/surveyView/SurveyComplete'
+import albaCreateForm       from '@/views/surveyView/albaCreateForm'
 import MySurvey             from '@/views/surveyView/MySurvey'
 import SurveyAnalysis       from '@/components/survey/analysis/SurveyAnalysis'
 import MyPage               from '@/views/myPageView/MyPage'
@@ -120,6 +121,11 @@ const router = new Router({
           path: 'surveycomplete',
           name: 'surveycomplete',
           component: SurveyComplete
+        },
+        {
+          path: 'albaCreateForm',
+          name: 'albaCreateForm',
+          component: albaCreateForm
         },
         {
           path: 'mysurvey',

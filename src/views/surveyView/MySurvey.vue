@@ -6,7 +6,7 @@
               large color="info"
               class="subheading
               font-weight-bold mt-4"
-              @click="SET_IS_ADD_SURVEY(true)"
+              @click="albaCreateFormRoute"
               >
               등록하기
             </v-btn>
@@ -106,6 +106,9 @@
       surveyRemove() {
        swal({text: "本当に削除しますか？", icon: "warning", buttons: true, dangerMode: true})
       },
+      albaCreateFormRoute() {
+        this.$router.push({name: 'albaCreateForm'})
+      }
     }
   }
 </script>
