@@ -48,7 +48,6 @@
           <v-card-text class="display-2 mt-5">
              Albachain을 이용해 보시겠습니까?
           </v-card-text>
-          <v-btn color="info" round large router :to="{name: 'join'}">회원 가입</v-btn>
         </div>
         </v-img>
       </v-flex>
