@@ -25,6 +25,11 @@ const localRequest = (method, url, data) => {
   .then(result => result.data)
 }
 
+const albaRequest = (method, url, data) => {
+  return axios({ method, url, data })
+  .then(result => result.data)
+}
+
 // 토큰정보를 헤더에 담아 넘겨주기위해 선언
 export const setAuthInHeader = token => {  
   axios.defaults.headers.common['Authorization'] = token ? token : null;
