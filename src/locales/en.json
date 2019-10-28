@@ -11,11 +11,11 @@
   "View": {
     "items": [
       {
-        "to": "/survey",
+        "to": "/alba",
         "text": "알바등록"
       },
       {
-        "to": "/surveymarket",
+        "to": "/albaList",
         "text": "알바리스트"
       }
     ]

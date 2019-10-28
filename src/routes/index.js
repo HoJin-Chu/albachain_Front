@@ -22,7 +22,7 @@ import donateHistory        from '@/components/mypage/donateHistory'
 import walletHistory        from '@/components/mypage/walletHistory'
 import MarketDetail         from '@/views/marketView/MarketDetail'
 import MarketSale           from '@/views/marketView/MarketSale'
-import AlbaDetailCard       from '@/components/market/AlbaDetailCard'
+import AlbaDetailPage       from '@/components/market/AlbaDetailPage'
 import Donation             from '@/views/donationView/Donation'
 import DonationDetail       from '@/views/donationView/DonationDetail'
 import AddDonationBox       from '@/views/donationView/AddDonationBox'
@@ -102,7 +102,7 @@ const router = new Router({
       ]
     },
     {
-      path: '/survey',
+      path: '/alba',
       name: 'survey',
       component: Survey,
       // beforeEnter: requireAuth,
@@ -128,8 +128,8 @@ const router = new Router({
           component: albaCreateForm
         },
         {
-          path: 'mysurvey',
-          name: 'mysurvey',
+          path: 'myalba',
+          name: 'myalba',
           component: MySurvey,
           children: [
             {
@@ -143,8 +143,8 @@ const router = new Router({
       ]
     },
     {
-      path: '/surveymarket',
-      name: 'surveymarket',
+      path: '/albaList',
+      name: 'albaList',
       component: SurveyMarket,
       // beforeEnter: requireAuth,
       children:[
@@ -161,10 +161,10 @@ const router = new Router({
           component: MarketSale
         },
         {
-          path: 'AlbaDetailCard/:albalist_id',
-          name: 'AlbaDetailCard',
+          path: 'AlbaDetailPage/:albalist_id',
+          name: 'AlbaDetailPage',
           props: true,
-          component: AlbaDetailCard
+          component: AlbaDetailPage
         }
       ]
     },

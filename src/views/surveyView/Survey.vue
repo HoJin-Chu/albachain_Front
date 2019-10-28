@@ -64,7 +64,7 @@
         <AddSurvey/>
       </v-container>
     </v-img>
-    <div v-else-if="this.$route.name == 'mysurvey'"><router-view :result = "this.result"/></div>
+    <div v-else-if="this.$route.name == 'myalba'"><router-view :result = "this.result"/></div>
     <div v-else-if="this.$route.name == 'surveyform'"><router-view/></div>
     <div v-else-if="this.$route.name == 'surveyrequest'"><router-view/></div>
     <div v-else-if="this.$route.name == 'surveycomplete'"><router-view/></div>
@@ -96,7 +96,7 @@
       // 설문제목 모달창
       ...mapMutations(['SET_IS_ADD_SURVEY']),
       my_survey_list(){
-        this.$router.push({ name: 'mysurvey' })
+        this.$router.push({ name: 'myalba' })
       },
       albaCreateFormRoute() {
         this.$router.push({name: 'albaCreateForm'})

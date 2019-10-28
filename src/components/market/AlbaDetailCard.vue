@@ -1,37 +1,41 @@
 <template>
-  <v-card color="#FAFAFA" style="cursor:pointer;" elevation="8" class="my-3 marketcard">
+ <v-flex xs10 style="margin:0 auto;">
+   
+  <v-card color="#FAFAFA" style="cursor:pointer;" elevation="8" class="my-3 marketcard ">
     <v-layout align-center>
-      <v-flex xs9>
+      <v-flex xs8>
         <v-card flat color="#FAFAFA">
           <div class="card-title 
           display-1 font-weight-bold pb-2">
-          {{albaList}}
+          {{albaList.NAME}}
           </div>
           <div class="card-text px-5 mx-5 font-weight-black">
-          asd
+          {{albaList.TEXT}}
           </div>
         </v-card>
       </v-flex>
       <v-flex xs3 text-xs-left>
         <v-card flat color="#FAFAFA" class="py-4 subheading font-weight-bold">
           <div class="headline font-weight-bold">
-           <span class="info--text font-italic"> asd </span> INO
+          \ <span class="info--text font-italic"> {{pay}} </span> 
           </div>
-          <div>
+          <!-- <div>
             <i class="fas fa-user-alt">
               asd 人
             </i>
-          </div>
+          </div> -->
           <div>
             <i class="far fa-calendar-alt font-weight-bold">
-            asd
-            ~ asd
+            {{start_date}}
+           <!-- ~ {{end_date}} -->
             </i>
           </div>
         </v-card>
       </v-flex>
     </v-layout>
   </v-card>
+ </v-flex>
+
 </template>
 
 <script>
@@ -39,6 +43,13 @@
   export default {
     name: 'AlbaDetailCard',
     props: ['albaList', 'index'],
+    data() {
+      return{
+        pay: this.albaList.PAY || "미정",
+        start_date: this.albaList.STARTDATE.substr(0,10) || "미정",
+        // end_date: this.albaList.ENDDATE.substr(0,10) || "미정"
+      }
+    }
   }
 </script>
 
@@ -46,4 +57,5 @@
 .marketcard{
   border-radius: 8px;
 }
+
 </style>

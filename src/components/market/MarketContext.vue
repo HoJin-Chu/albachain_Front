@@ -3,10 +3,10 @@
     <v-container fluid grid-list-xl v-if="!this.$store.state.loading">
       <v-layout text-xs-center row wrap class="pa-2 mx-5">
         <v-layout row wrap justify-center>
-          <v-flex xs12 v-for="(albaList, index) in myAlbaForm" :key="index">
+          <v-flex xs12 v-for="(albaList, index) in myAlbaForm.jobOffer" :key="index">
             <router-link
               :to="{
-                name: 'AlbaDetailCard',
+                name: 'AlbaDetailPage',
                 params:{ albalist_id: albaList._id}
               }">
                 <AlbaDetailCard
