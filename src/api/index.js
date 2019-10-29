@@ -129,7 +129,20 @@ export const donation = {
     .catch(error => {
       console.log(error)
     })
-  }
+  },
+
+  addAlba(data){
+    return axios({
+      method: 'post',
+      url: 'http://15.164.224.74:3000/employerjoboffer',
+      data: data,
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(response => response.data) 
+    .catch(error => {
+      console.log(error)
+    })
+  },
 }
 
 export const market = {

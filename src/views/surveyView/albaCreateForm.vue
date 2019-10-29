@@ -2,7 +2,7 @@
   <div>
     <v-container fluid grid-list-md pt-5 mt-5>
        <v-form
-        @submit.prevent="adddonation"
+        @submit.prevent="addAlbaForm"
         id="add-donation-form"
         enctype="multipart/form-data"
       >
@@ -10,8 +10,7 @@
           <v-layout row wrap>
             <v-flex xs10>
               <div class="display-2 font-weight-bold pa-3 ml-5">
-                <span v-if="this.title.length==0" class="grey--text text--darken-1">구인등록하기</span>
-                <span v-else>{{title}}</span>
+                <span class="grey--text text--darken-1">구인등록하기</span>
               </div>
             </v-flex>
             <v-flex xs2>
@@ -28,10 +27,10 @@
           <v-card class="text-xs-center" flat style="background-color:#FAFAFA;" >
             <v-container fluid>
               <v-layout align-center justify-space-around column fill-height>
-                <div class="display-1 font-weight-bold py-5 my-2">ㅁㅁㄴㅇㄹ</div>
-                <div class="display-1 font-weight-bold py-5 my-5">ㅁㄴㅇㄹ</div>
-                <div class="display-1 font-weight-bold py-5 my-5">ㅁㄴㅇㄹ</div>
-                <div class="display-1 font-weight-bold py-5">ㅁㄴㅇㄹ</div>
+                <div class="headline font-weight-bold pt-5">고용주아이디</div>
+                <div class="headline font-weight-bold pt-5 py-3">알바 시작일자</div>
+                <div class="headline font-weight-bold pt-5 py-2">알바 기간</div>
+                <div class="headline font-weight-bold py-5 my-5">정보</div>
               </v-layout>
             </v-container>
           </v-card>
@@ -42,63 +41,19 @@
               <v-layout column fill-height>
                 <div style="padding-top:3%">
                   <v-layout>
-                    <v-flex xs2 mr-5>
-                      <v-select
-                        :items="category_item"
-                        v-model="category"
-                        label="ㅁㄴㅇㄹ"
-                        item-text="name"
-                        item-value="value"
-                        append-icon="arrow_drop_down"
-                        solo hide-details>
-						          </v-select>
-                    </v-flex>
                     <v-flex xs5>
                       <v-text-field
                         v-model="title"
                         :rules="titleRules"
                         :counter="30"
-                        label="ㅁㄴㅇㄹ"
+                        label="아이디를 입력하세요"
                         required>
                       </v-text-field>
                     </v-flex>
-                    
                   </v-layout>
                 </div>
                 <div>
-                  <div
-                    class="image-input mt-4"
-                    :style="{ 'background-image': `url(${imageData})` }"
-                    @click="chooseImage"
-                  >
-                    <span
-                      v-if="!imageData"
-                      class="placeholder"
-                    >
-                      이미지를 넣어주세요
-                    </span>
-                    <input
-                      class="file-input"
-                      ref="fileInput"
-                      type="file"
-                      @input="onSelectFile"
-                    >
-                  </div>
-                </div>
-                <div class="py-4 my-3">
-                  <v-flex xs5>
-                    <v-textarea
-                      v-model="content" solo
-                      :rules="contentRules"
-                      :counter="255"
-                      label="ㅁㄴㅇㄹ"
-                    >
-                    </v-textarea>
-                  </v-flex>
-                </div>
-                <div class="py-4">
-                  <v-layout>
-                    <v-flex xs3>
+                  <v-flex xs3>
                       <v-menu
                         ref="menu"
                         v-model="menu"
@@ -111,7 +66,7 @@
                         <template v-slot:activator>
                           <v-text-field
                             v-model="closed_at"
-                            label="ㅁㄴㅇㄹ"
+                            label="시작일"
                             prepend-icon="event"
                             readonly
                           ></v-text-field>
@@ -120,17 +75,31 @@
                           ref="picker"
                           v-model="closed_at"
                           max="2024-12-31"
-                          min="2019-06-19"
+                          min="2019-11-01"
                           @change="save"
                         ></v-date-picker>
                       </v-menu>
                     </v-flex>
+                </div>
+                <div class="py-4">
+                  <v-layout>
                     <v-flex xs2>
-                      <v-text-field type="number" v-model="target_amount" label="ㅇ" required>
+                      <v-text-field type="number" v-model="target_amount" label="알바기간" required>
                       </v-text-field>
                     </v-flex>
-                    <v-flex class="mt-4">INO</v-flex>
+                    <v-flex class="mt-4">시간</v-flex>
                   </v-layout>
+                </div>
+                <div class="py-4 my-3">
+                  <v-flex xs5>
+                    <v-textarea
+                      v-model="content" solo
+                      :rules="contentRules"
+                      :counter="255"
+                      label="설명"
+                    >
+                    </v-textarea>
+                  </v-flex>
                 </div>
               </v-layout>
             </v-container>
@@ -155,13 +124,13 @@
         title:'',
         titleRules: [
           //모금함 이름 규격
-          v => !!v || '募金箱名をご記入ください。',
-          v => v.length <= 30 || '募金箱名は30字以内でお願いします。'
+          v => !!v || '내용을 입력하세요',
+          v => v.length <= 30 || '30자 이내로 적어주세요'
         ],
         contentRules: [
           //모금함 설명 규격
-          v => !!v || '募金箱の紹介をご記入ください。',
-          v => v.length <= 255 || '募金箱の紹介は255字以内でお願いします。'
+          v => !!v || '정보를 적어주세요',
+          v => v.length <= 255 || '255자 이내로 적어주세요'
         ],
         file:'',
         content:'',
@@ -170,17 +139,6 @@
         menu:false,
         // imageData: ""
         imageData: null,
-        category:'',
-        category_item: [
-          {name: '児童 / 青少年', id: 1},
-          {name: '老人', id: 2},
-          {name: '障碍者', id: 3},
-          {name: 'グローバル', id: 4},
-          {name: '家族 / 女性', id: 5},
-          {name: '市民社会', id: 6},
-          {name: '動植物', id: 7},
-          {name: 'その他', id: 8}
-        ],
       }
     },
     watch:{
@@ -189,7 +147,7 @@
       }
     },
     methods: {
-      ...mapActions(['ADDDONATION','FETCH_DONATION']),
+      ...mapActions(['ADDDONATION','FETCH_DONATION','ADD_ALBA']),
       chooseImage () {
         this.$refs.fileInput.click()
       },
@@ -216,7 +174,7 @@
         data.append('title',this.title)
         data.append('file',this.file)
         data.append('content',this.content)
-        data.append('closed_at',this.closed_at)
+        data.append('closed_at', this.closed_at)
         data.append('target_amount',this.target_amount)
         let config = {
           headers : {
@@ -225,6 +183,24 @@
         }
         this.ADDDONATION(data, config)
         this.$router.push({ name: 'donation' })
+      },
+
+      addAlbaForm() {
+        let data = {
+          'ID': this.title,
+          'STARTDATE': this.closed_at,
+          'ENDDATE': this.closed_at,
+          'PAY': this.target_amount,
+          'TEXT': this.content
+        }
+        // let data = new FormData()
+        // data.append('ID', this.title)
+        // data.append('STARTDATE', this.closed_at)
+        // data.append('PERIOD', this.target_amount)
+        // data.append('TEXT',this.content)
+       
+        this.ADD_ALBA(data)
+        this.$router.push({ name: 'albaList' })
       },
     },
   }

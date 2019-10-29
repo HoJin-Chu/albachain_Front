@@ -5,12 +5,17 @@
     <v-layout align-center>
       <v-flex xs8>
         <v-card flat color="#FAFAFA">
-          <div class="card-title 
+          <div v-if="albaList.TEXT.length > 10" class="card-title 
           display-1 font-weight-bold pb-2">
-          {{albaList.NAME}}
+          {{albaList.TEXT.substr(0,10) + "..."}}
+          </div>
+
+          <div v-else class="card-title 
+          display-1 font-weight-bold pb-2">
+          {{albaList.TEXT}}
           </div>
           <div class="card-text px-5 mx-5 font-weight-black">
-          {{albaList.TEXT}}
+          created By - {{albaList.NAME}}
           </div>
         </v-card>
       </v-flex>

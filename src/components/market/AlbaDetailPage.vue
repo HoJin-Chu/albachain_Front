@@ -40,10 +40,7 @@
                   <span>販売価格</span>
                 </v-tooltip>
               </div>
-              
-              <div  class="px-3">
-                <v-chip class="pa-1" color="grey darken-2" text-color="white" large close>すべての人数</v-chip>
-              </div>
+             
             </div>
             <div style="margin-top:50px;">
            

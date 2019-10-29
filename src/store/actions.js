@@ -111,6 +111,13 @@ const actions = {
     })
   }, 
 
+  ADD_ALBA(context, data){
+    return api.donation.addAlba(data)
+    .then(() => {
+      context.dispatch('FETCH_DONATION')
+    })
+  },
+
   FETCH_DONATION_TEST(context) {
     context.state.loading = true
     api.donation.donationFetch()
