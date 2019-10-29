@@ -15,7 +15,7 @@
               업무 집중도 상승시켜 보세요.
             </div>
           </span>
-          <v-img src="/static/소상공인.png" class="ma-5" max-width="15%"></v-img>
+          <v-img src="/static/seller.png" class="ma-5" max-width="15%"></v-img>
           </v-layout>
         </div>
       </v-flex>
@@ -26,7 +26,7 @@
           data-aos-delay="200"
           >
           <v-layout  align-center justify-center>
-              <v-img src="/static/알바.png" class="ma-5" max-width="15%" centered></v-img>
+              <v-img src="/static/alba.png" class="ma-5" max-width="15%" centered></v-img>
               <span class="text-xs-left text-md-left ">
                 <span class="headline info--text text-xs-left font-weight-black">피고용자</span>
                 <div class="mt-4 title message" >

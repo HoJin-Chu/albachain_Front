@@ -25,13 +25,13 @@
       {
         "hoverTitle": "구인 공고",
         "subText": "구인 공고 작성하기",
-        "img": "/static/알바왼쪽.png",
+        "img": "/static/albaleft.png",
         "color": "blue--text text--darken-1"
       },
       {
         "hoverTitle": "내가 작성한 구인 공고",
         "subText": "작성한 구인 공고 보기",
-        "img": "/static/알바오른쪽.png",
+        "img": "/static/albaright.png",
         "color": "green--text text--darken-3"
       }
     ]
