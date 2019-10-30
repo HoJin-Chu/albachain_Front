@@ -5,11 +5,11 @@
     v-scroll="onScroll"
     app
     :flat="!isScrolling"
-    :color="!isScrolling ? 'transparent' : '#FFFFFF'"
+    :color="!isScrolling ? '#FFFFFF' : '#FFFFFF'"
     style="z-index: 9999; "
   >
     <router-link to="/">
-      <h1 style="font-size:40px;" class="pa-4">AlbaChain</h1>
+      <img src="/static/alab.png" id="top" width="200px">
     </router-link>
     <v-toolbar-items v-if="$vuetify.breakpoint.mdAndUp && this.$route.name == 'home'">
       <!-- :active-class="!isScrolling ? 'grey--text text--darken-3' : 'grey--text text--darken-3'"  -->
@@ -18,7 +18,7 @@
         :key="i"
         :to="item.to"
         flat
-        :class="!isScrolling ? 'title white--text' : 'title grey--text text--darken-3'"
+        :class="!isScrolling ? 'title ' : 'title grey--text text--darken-3'"
       >
         <span v-text="item.text" />
       </v-btn>
