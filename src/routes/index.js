@@ -1,51 +1,51 @@
-import Vue                  from 'vue'
-import Router               from 'vue-router'
-import store                from '../store'
-import swal                 from 'sweetalert'
-import Join                 from '@/views/auth/Join'
-import Home                 from '@/views/Home'
-import Survey               from '@/views/surveyView/Survey'
-import SurveyMarket         from '@/views/marketView/SurveyMarket'
-import SurveyForm           from '@/views/surveyView/SurveyForm'
-import SurveyRequest        from '@/views/surveyView/SurveyRequest'
-import SurveyComplete       from '@/views/surveyView/SurveyComplete'
-import albaCreateForm       from '@/views/surveyView/albaCreateForm'
-import MySurvey             from '@/views/surveyView/MySurvey'
-import SurveyAnalysis       from '@/components/survey/analysis/SurveyAnalysis'
-import MyPage               from '@/views/myPageView/MyPage'
-import surveyHistory        from '@/components/mypage/surveyHistory'
-import surveyHistoryDetail  from '@/components/mypage/surveyHistoryDetail'
-import marketHistory        from '@/components/mypage/marketHistory'
-import marketHistoryDetail  from '@/components/mypage/marketHistoryDetail'
-import foundationHistory    from '@/components/mypage/foundationHistory'
-import donateHistory        from '@/components/mypage/donateHistory'
-import walletHistory        from '@/components/mypage/walletHistory'
-import MarketDetail         from '@/views/marketView/MarketDetail'
-import MarketSale           from '@/views/marketView/MarketSale'
-import AlbaDetailPage       from '@/components/market/AlbaDetailPage'
-import Donation             from '@/views/donationView/Donation'
-import DonationDetail       from '@/views/donationView/DonationDetail'
-import AddDonationBox       from '@/views/donationView/AddDonationBox'
+import Vue from 'vue'
+import Router from 'vue-router'
+import store from '../store'
+import swal from 'sweetalert'
+import Join from '@/views/auth/Join'
+import Home from '@/views/Home'
+import Survey from '@/views/surveyView/Survey'
+import SurveyMarket from '@/views/marketView/SurveyMarket'
+import SurveyForm from '@/views/surveyView/SurveyForm'
+import SurveyRequest from '@/views/surveyView/SurveyRequest'
+import SurveyComplete from '@/views/surveyView/SurveyComplete'
+import albaCreateForm from '@/views/surveyView/albaCreateForm'
+import MySurvey from '@/views/surveyView/MySurvey'
+import SurveyAnalysis from '@/components/survey/analysis/SurveyAnalysis'
+import MyPage from '@/views/myPageView/MyPage'
+import surveyHistory from '@/components/mypage/surveyHistory'
+import surveyHistoryDetail from '@/components/mypage/surveyHistoryDetail'
+import marketHistory from '@/components/mypage/marketHistory'
+import marketHistoryDetail from '@/components/mypage/marketHistoryDetail'
+import foundationHistory from '@/components/mypage/foundationHistory'
+import donateHistory from '@/components/mypage/donateHistory'
+import walletHistory from '@/components/mypage/walletHistory'
+import MarketDetail from '@/views/marketView/MarketDetail'
+import MarketSale from '@/views/marketView/MarketSale'
+import AlbaDetailPage from '@/components/market/AlbaDetailPage'
+import Donation from '@/views/donationView/Donation'
+import DonationDetail from '@/views/donationView/DonationDetail'
+import AddDonationBox from '@/views/donationView/AddDonationBox'
 
 Vue.use(Router)
 
 const requireAuth = (to, from, next) => {
-  store.getters.isAuth ? 
-  next() : 
-  swal(
-    "접근불가!",
-    "로그인후 이용 가능합니다.",
-    "error",
-    {button: "확인"}
-  );
+  store.getters.isAuth ?
+    next() :
+    swal(
+      "접근불가!",
+      "로그인후 이용 가능합니다.",
+      "error", {
+        button: "확인"
+      }
+    );
 }
 
 const router = new Router({
 
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -59,30 +59,25 @@ const router = new Router({
       path: '/mypage',
       name: 'mypage',
       component: MyPage,
-      children: [
-        {
+      children: [{
           path: 'surveyhistory',
           name: 'surveyhistory',
           component: surveyHistory,
-          children: [
-            {
-              path: 'detail/:form_id',
-              name: 'surveyhistorydetail',
-              component : surveyHistoryDetail
-            }
-          ]
+          children: [{
+            path: 'detail/:form_id',
+            name: 'surveyhistorydetail',
+            component: surveyHistoryDetail
+          }]
         },
         {
           path: 'markethistory',
           name: 'markethistory',
           component: marketHistory,
-          children: [
-            {
-              path: 'detail/:form_id',
-              name: 'markethistorydetail',
-              component : marketHistoryDetail
-            }
-          ]
+          children: [{
+            path: 'detail/:form_id',
+            name: 'markethistorydetail',
+            component: marketHistoryDetail
+          }]
         },
         {
           path: 'foundationhistory',
@@ -90,8 +85,8 @@ const router = new Router({
           component: foundationHistory
         },
         {
-          path: 'donatehistory',
-          name: 'donatehistory',
+          path: 'employeehistory',
+          name: 'employeehistory',
           component: donateHistory
         },
         {
@@ -106,8 +101,7 @@ const router = new Router({
       name: 'survey',
       component: Survey,
       // beforeEnter: requireAuth,
-      children: [
-        {
+      children: [{
           path: 'surveyform',
           name: 'surveyform',
           component: SurveyForm
@@ -131,14 +125,12 @@ const router = new Router({
           path: 'myalba',
           name: 'myalba',
           component: MySurvey,
-          children: [
-            {
-              path: 'analysis/:form_id',
-              name: 'analysis',
-              props: true,
-              component: SurveyAnalysis
-            }
-          ]
+          children: [{
+            path: 'analysis/:form_id',
+            name: 'analysis',
+            props: true,
+            component: SurveyAnalysis
+          }]
         }
       ]
     },
@@ -147,10 +139,9 @@ const router = new Router({
       name: 'albaList',
       component: SurveyMarket,
       // beforeEnter: requireAuth,
-      children:[
-        {
-          path:'detail/:market_id',
-          name:'surveymarketdetail',
+      children: [{
+          path: 'detail/:market_id',
+          name: 'surveymarketdetail',
           props: true,
           component: MarketDetail
         },
@@ -172,9 +163,8 @@ const router = new Router({
       path: '/donation',
       name: 'donation',
       component: Donation,
-    
-      children:[
-        {
+
+      children: [{
           path: 'detail/:donation_id',
           name: 'donationdetail',
           props: true,
@@ -190,10 +180,14 @@ const router = new Router({
     {
       path: '/*',
       name: 'notfound',
-      redirect: {name : 'Home'}
+      redirect: {
+        name: 'Home'
+      }
     }
   ],
-  scrollBehavior : () =>({y:0})
+  scrollBehavior: () => ({
+    y: 0
+  })
 })
 
 export default router
